@@ -138,6 +138,16 @@ header {
   right: 0;
 }
 
+main {
+  margin-bottom: 2rem;
+}
+
+.grid__control {
+  &.grid {
+    gap: 5rem;
+  }
+}
+
 .hero {
   .hero__image > img {
     margin-bottom: 1rem;
@@ -173,16 +183,9 @@ header {
   }
 }
 
-main {
-  .flex {
-    flex-direction: column;
-    gap: 5rem;
-  }
-}
-
 .blog {
   .blog__continer {
-    padding: 1.3rem;
+    padding: 1.5rem;
     background: var(--Very-dark-blue);
   }
 
@@ -350,18 +353,26 @@ main {
       padding-top: 0;
       padding-bottom: 0;
     }
-    .flex {
-      flex-direction: row;
+  }
+
+  .grid__control {
+    &.grid {
+      grid-template-columns: repeat(2, 1fr) 400px;
       gap: 2rem;
     }
   }
 
+  .hero {
+    grid-column: 1/3;
+  }
+
   .blog {
-    flex-basis: 50vw;
+    grid-column: 3/4;
+    grid-row: 1/2;
   }
 
   .sub_blog {
-    grid-column: 1/3;
+    grid-column: 1/4;
     .container {
       padding-top: 3rem;
       padding-bottom: 3rem;
