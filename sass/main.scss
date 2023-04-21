@@ -49,6 +49,7 @@ img {
 
 body {
   font-family: var(--fb);
+  font-size: 100%;
 }
 
 .navbar__open,
@@ -263,6 +264,11 @@ main {
 }
 
 @media (min-width: 600px) {
+  .hero__title {
+    margin-bottom: 0;
+    font-size: 3rem;
+  }
+
   .hero {
     .hero__image > .hero__img-desktop {
       display: block;
@@ -274,12 +280,7 @@ main {
     .body__content {
       &.grid {
         grid-template-columns: repeat(2, 1fr);
-        gap: 1rem;
-      }
-
-      .hero__title {
-        margin-bottom: 0;
-        font-size: 4rem;
+        gap: 0.8rem;
       }
     }
   }
@@ -308,8 +309,12 @@ main {
 // }
 
 @media (min-width: 1000px) {
+  .hero__title {
+    font-size: 3.5rem;
+  }
+
   .container {
-    padding: 3rem 7.5rem;
+    padding: 3rem 5rem;
   }
 
   .navbar__open,
@@ -383,5 +388,15 @@ main {
         grid-template-columns: repeat(3, 1fr);
       }
     }
+  }
+}
+
+@media (min-width: 1200px) {
+  .hero__title {
+    font-size: 4rem;
+  }
+
+  .container {
+    padding: 3rem 7.5rem;
   }
 }
